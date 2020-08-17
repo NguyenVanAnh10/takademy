@@ -1,0 +1,4 @@
+<head>
+  {{ $bootstrap := resources.Get "scss/bootstrap.min.scss" | resources.ToCSS }}
+  <link rel="stylesheet" href="{{$bootstrap.RelPermalink}}" />
+</head>
