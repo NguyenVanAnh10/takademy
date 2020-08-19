@@ -1,0 +1,32 @@
+.header {
+  .colorful-logo {
+    height: 125px;
+  }
+  .nav-link {
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .active {
+    background-color: #281e1d;
+    background-image: linear-gradient(to top, #281e1d, #1d1d1d);
+    border-bottom: 2px solid $freshRed;
+    .nav-link {
+      color: $freshRed !important;
+    }
+  }
+  .navbar-toggler {
+    border: none;
+  }
+  .container-header {
+    align-items: unset !important;
+    padding: unset !important;
+    .navbar-collapse {
+      align-items: unset;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    .container-header {
+      padding: 0 50px !important;
+    }
+  }
+}

@@ -1,4 +1,64 @@
-<footer>
+<footer class="footer container-fluid">
+  <div
+    class="text-light d-flex py-4 container-footer justify-content-center align-items-center"
+  >
+    <div class="footer-left">
+      <p class="copyright">&copy; 2019 Adsota, inc.</p>
+      <div class="icons">
+        <a href="#" class="mr-4">
+          <i class="fab fa-facebook-square"></i>
+        </a>
+        <a href="#" class="mr-4">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="#" class="mr-4">
+          <i class="fab fa-twitter-square"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer-right ml-lg-auto d-flex">
+      <ul
+        class="navbar-nav ml-auto flex-row justify-content-end align-items-center"
+      >
+        <li class="nav-item mx-2 px-3">
+          <a class="nav-link text-white font-weight-bold" href="#">About</a>
+        </li>
+        <li class="nav-item mx-2 px-3">
+          <a class="nav-link text-white font-weight-bold" href="#">Creators</a>
+        </li>
+        <li class="nav-item mx-2 px-3">
+          <a class="nav-link text-white font-weight-bold" href="#">Brands</a>
+        </li>
+        <li class="nav-item mx-2 px-3">
+          <a class="nav-link text-white font-weight-bold" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
   <script src="{{relURL `/js/jquery-3.5.1.min.js`}}"></script>
   <script src="{{relURL `/js/bootstrap.bundle.min.js`}}"></script>
+  <script
+    src="https://kit.fontawesome.com/f75e5e6f69.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="{{relURL `/js/owl.carousel.min.js`}}"></script>
+  <script>
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      responsive: {
+        600: {
+          items: 1,
+        },
+        1000: {
+          items: 3,
+        },
+      },
+    });
+    $(".carousel").carousel({
+      interval: 2000,
+    });
+  </script>
 </footer>

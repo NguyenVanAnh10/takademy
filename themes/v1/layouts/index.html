@@ -1,1 +1,199 @@
-{{define "main"}} {{end}}
+{{define "main"}}
+<div class="home text-white">
+  <div class="section section-header">
+    <div class="container-fluid">
+      <div class="row m-0 bg-cover">
+        <div class="bg-cover-left bg-cover-black col-lg-9 col-12 p-0">
+          <div class="title-area pb-0">
+            <div class="title">
+              <h1 class="text-white display-2 font-weight-bold text-center">
+                {{.Params.introduction.heading}}
+              </h1>
+            </div>
+            <div class="content">
+              <p class="lead text-white description">
+                {{.Params.introduction.description}}
+              </p>
+            </div>
+            <div class="creator-picture">
+              <div class="left-creator">
+                <img
+                  src="{{relURL .Params.introduction.creatorImages.creator1}}"
+                  alt=""
+                />
+              </div>
+              <div class="right-creator">
+                <img
+                  src="{{relURL .Params.introduction.creatorImages.creator2}}"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-cover-right col-lg-3 d-none d-lg-block">
+          <img
+            class="img-blur-bird"
+            src="{{relURL .Params.introduction.birdImage}}"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="solution bg-red container-content">
+      <div class="row">
+        <div class="col-md-12 col-lg-3 d-flex align-items-center mb-4">
+          <div class="heading pl-4">
+            <h1 class="font-weight-bold">
+              {{.Params.solutions.heading}}
+            </h1>
+            <p>{{.Params.solutions.subHeading}}</p>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-8 offset-lg-1">
+          <div class="row">
+            {{range .Params.solutions.items}}
+            <div class="col-lg-6 col-md-12">
+              <div
+                class="card text-white mb-3 bg-transparent border-0 text-center m-auto"
+                style="max-width: 20em;"
+              >
+                <div class="card-body">
+                  <h3 class="card-title font-weight-bold mb-4">
+                    {{.title}}
+                  </h3>
+                  <div class="icon">
+                    <img src="{{relURL .icon}}" alt="" />
+                  </div>
+                  <h4 class="card-title font-weight-bolder my-4">
+                    {{.subTitle}}
+                  </h4>
+                  <p class="card-text">
+                    {{.description}}
+                  </p>
+                </div>
+              </div>
+            </div>
+            {{end}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="creators container-content">
+      <div class="heading pl-4">
+        <h1 class="font-weight-bold">
+          {{.Params.creators.heading}}
+        </h1>
+        <p>{{.Params.creators.subHeading}}</p>
+      </div>
+      <div class="content">
+        <div class="owl-carousel owl-theme slider">
+          {{range .Params.creators.items}}
+          <div class="item">
+            <div class="card card-creator bg-dark-image border-danger">
+              <img
+                src="{{relURL .image}}"
+                class="card-img-top img-creator"
+                alt="..."
+              />
+            </div>
+          </div>
+          {{end}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="news container-content">
+      <div class="heading pl-4">
+        <h1 class="font-weight-bold">
+          {{.Params.news.heading}}
+        </h1>
+        <p>{{.Params.news.subHeading}}</p>
+      </div>
+      <div class="content">
+        <div
+          id="carouselExampleInterval"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+            {{range $i,$e := .Params.news.items}}
+            <div
+              class="carousel-item {{if eq $i 1}}active{{end}}"
+              data-interval="10000"
+            >
+              <div class="slide-content">
+                <div class="row h-100">
+                  <div class="bg-piece-left-red col-lg-3 offset-lg-1"></div>
+                  <div
+                    class="bg-piece-transparent col-lg-8 d-flex align-items-center"
+                  >
+                    <div class="slide-image w-100">
+                      <img
+                        src="{{relURL $e.image}}"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{end}}
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleInterval"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleInterval"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="partners container-content">
+      <div class="heading pl-4">
+        <h1 class="font-weight-bold">
+          {{.Params.partners.heading}}
+        </h1>
+        <p>{{.Params.partners.subHeading}}</p>
+      </div>
+      <div class="content">
+        <div
+          class="list d-flex flex-wrap justify-content-center align-items-center"
+        >
+          {{range .Params.partners.items}}
+          <div class="item m-4">
+            {{if eq .logo "/images/logos/gk_png.png"}}
+            <img src="{{relURL .logo}}" alt="" style="width: 120px;" />
+            {{else}}
+            <img src="{{relURL .logo}}" alt="" />
+            {{end}}
+          </div>
+          {{end}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ partial "section/contact.html" . }}
+</div>
+{{end}}
