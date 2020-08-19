@@ -15,7 +15,7 @@
   .bg-dark-image {
     background-color: $coverBackgroundBlack;
   }
-  .bg-cover::after {
+  .content-cover::after {
     background-image: linear-gradient(to top, #161616, rgba(22, 22, 22, 0));
     content: "";
     position: absolute;
@@ -26,9 +26,40 @@
     z-index: 4;
     width: 100%;
   }
+  .content-cover {
+    height: 840px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    .title-area {
+      padding: 30px 0 0 0;
+
+      .title::after {
+        border: 2px solid $freshRed;
+        content: "";
+        width: 20vw;
+        display: block;
+        position: absolute;
+        left: 0;
+      }
+      .content {
+        max-width: 750px;
+        margin: 3rem 0 0 9rem;
+        padding: 0;
+        .lead {
+          font-size: 1.8rem;
+        }
+        .description {
+          max-width: 100%;
+        }
+      }
+    }
+  }
   .bg-cover {
     overflow: hidden;
     height: 850px;
+    position: relative;
+    z-index: 1;
     .bg-cover-black {
       background-color: $coverBackgroundBlack;
       .title-area {
@@ -44,7 +75,7 @@
         }
         .content {
           max-width: 750px;
-          margin: 3rem 11rem;
+          margin: 3rem 9rem;
           padding: 0;
           .lead {
             font-size: 1.8rem;
@@ -56,6 +87,8 @@
       }
     }
     .bg-cover-left {
+      position: relative;
+      z-index: 2;
     }
     .bg-cover-right {
       background-color: #fa1e28;
@@ -63,6 +96,7 @@
       display: block;
       position: relative;
       overflow: hidden;
+      z-index: 1;
     }
     .img-blur-bird {
       width: 350px;
@@ -74,32 +108,11 @@
   }
 
   .creator-picture {
-    position: relative;
-
-    .left-creator {
-      display: inline-block;
-      position: absolute;
-      top: 22px;
-      left: 0px;
-      img {
-        position: absolute;
-        z-index: 1;
-        height: 550px;
-      }
-    }
-
-    .right-creator {
-      height: 686px;
-      overflow: hidden;
-      display: inline-block;
+    img {
       position: relative;
-      z-index: 3;
-      left: 400px;
-      // left: 235px;
-      img {
-        width: 420px;
-        position: relative;
-      }
+      transform: scale(0.8);
+      right: 11vw;
+      bottom: 100px;
     }
   }
   .heading {
@@ -234,10 +247,10 @@
       max-width: 35vw !important;
     }
     .bg-cover {
-      height: 1030px;
+      height: 840px;
     }
     .title-area {
-      padding: 12.5rem 0 0 18rem !important;
+      padding: 12.5rem 0 0 11rem !important;
       position: relative;
       .creator-picture {
         position: absolute;

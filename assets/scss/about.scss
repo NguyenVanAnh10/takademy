@@ -1,18 +1,29 @@
 .about {
-  font-size: 1.5rem;
+  font-size: 3.1rem;
+  .section {
+    padding: 10rem 5rem;
+  }
   .introduction {
     .heading {
       h1 {
-        font-size: 120px;
+        font-size: 14.5rem;
       }
     }
     .lead {
-      font-size: 1.5rem;
+      font-size: 3.1rem;
     }
   }
+
   .description {
     .text-box {
-      padding: 50px 100px;
+      padding: 5rem 12rem 9rem;
+    }
+  }
+  .vision {
+    .creators-image {
+      img {
+        transform: scale(0.75);
+      }
     }
   }
 }

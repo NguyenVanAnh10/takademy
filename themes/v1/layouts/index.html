@@ -3,34 +3,42 @@
   <div class="section section-header">
     <div class="container-fluid">
       <div class="row m-0 bg-cover">
-        <div class="bg-cover-left bg-cover-black col-lg-9 col-12 p-0">
-          <div class="title-area pb-0 h-100">
-            <div class="title">
-              <h1
-                class="text-white font-weight-bold text-uppercase font-site-header"
-              >
-                {{.Params.introduction.heading}}
-              </h1>
-            </div>
-            <div class="content">
-              <p class="lead text-white description">
-                {{.Params.introduction.description}}
-              </p>
-            </div>
-            <div class="creator-picture">
-              <img
-                src="{{relURL `/images/creators/creator_cover_home.png`}}"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
+        <div class="bg-cover-left bg-cover-black col-lg-9 col-12 p-0"></div>
         <div class="bg-cover-right col-lg-3 d-none d-lg-block">
           <img
             class="img-blur-bird"
             src="{{relURL .Params.introduction.birdImage}}"
             alt=""
           />
+        </div>
+      </div>
+      <div class="content-cover">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="title-area pb-0 h-100">
+              <div class="title">
+                <h1
+                  class="text-white font-weight-bold text-uppercase font-site-header"
+                >
+                  {{.Params.introduction.heading}}
+                </h1>
+              </div>
+              <div class="content">
+                <p class="lead text-white description">
+                  {{.Params.introduction.description}}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="creator-picture">
+              <img
+                class="h-100"
+                src="{{relURL `/images/creators/creator_cover_home.png`}}"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -93,7 +101,7 @@
             <div class="card card-creator bg-dark-image border-danger">
               <img
                 src="{{relURL .image}}"
-                class="card-img-top img-creator"
+                class="card-img-top img-creator h-100"
                 alt="..."
               />
             </div>

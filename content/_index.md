@@ -25,9 +25,9 @@ creators:
   heading: Các nhà sáng tạo
   subHeading: nội dung
   items:
-    - image: /images/creators/4.png
-    - image: /images/creators/1.png
-    - image: /images/creators/d.png
+    - image: /images/creators/dkkhi.png
+    - image: /images/creators/anhma.png
+    - image: /images/creators/longca.png
 news:
   heading: Tin tức
   subHeading: Thông tin mới nhất
