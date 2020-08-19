@@ -6,6 +6,8 @@
 @import "./header.scss";
 @import "./footer.scss";
 @import "./home.scss";
+@import "./partials.scss";
+@import "./about.scss";
 
 body {
   background-color: $mainBackground;
@@ -14,4 +16,16 @@ body {
 }
 .bg-transparent {
   background-color: transparent;
+}
+.bg-red {
+  background-color: $freshRed;
+}
+.text-red {
+  color: $freshRed !important;
+}
+.bg-cover-black {
+  background-color: $coverBackgroundBlack;
+}
+.font-site-header {
+  font-size: 9.5rem !important;
 }

@@ -1,19 +1,17 @@
 .home {
-  font-size: 22px;
+  font-size: 1.5rem;
   .section-header {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     position: relative;
   }
   .container-content {
-    padding: 75px 100px;
+    padding: 8rem 7.5rem;
   }
   .content {
-    padding: 150px 0;
+    padding: 11rem 0;
   }
-  .bg-red {
-    background-color: $freshRed;
-  }
+
   .bg-dark-image {
     background-color: $coverBackgroundBlack;
   }
@@ -35,9 +33,6 @@
       background-color: $coverBackgroundBlack;
       .title-area {
         padding: 30px 0 0 0;
-        .title {
-          text-transform: uppercase;
-        }
 
         .title::after {
           border: 2px solid $freshRed;
@@ -49,8 +44,11 @@
         }
         .content {
           max-width: 750px;
-          margin: 40px 75px;
+          margin: 3rem 11rem;
           padding: 0;
+          .lead {
+            font-size: 1.8rem;
+          }
           .description {
             max-width: 100%;
           }
@@ -69,8 +67,9 @@
     .img-blur-bird {
       width: 350px;
       position: relative;
-      top: 20px;
-      left: 20x;
+      top: 195px;
+      left: 86px;
+      transform: scale(1.8);
     }
   }
 
@@ -104,18 +103,32 @@
     }
   }
   .heading {
-    border-left: 4px solid $freshRed;
+    border-left: 0.5rem solid $freshRed;
+    h1 {
+      font-size: 4rem;
+    }
     p {
-      font-size: 25px;
+      font-size: 2.75rem;
     }
   }
   .solution {
     .heading {
-      border-left: 4px solid $coverBackgroundBlack;
+      border-left: 0.5rem solid $coverBackgroundBlack;
+      p {
+        margin-bottom: 0;
+      }
     }
     .icon {
       img {
-        width: 100px;
+        width: 140px;
+      }
+    }
+    .solution-cards {
+      .card-title {
+        font-size: 2.25rem;
+      }
+      .card-text {
+        font-size: 1.8rem;
       }
     }
   }
@@ -149,10 +162,10 @@
       padding: 100px 0;
       .slide {
         .slide-content {
-          height: 540px;
           .bg-piece-left-red {
             background-color: #ae252c;
-            height: 100%;
+            height: 940px;
+            // height: 100%;
             position: relative;
             .desc {
               position: absolute;
@@ -191,41 +204,25 @@
       }
     }
   }
-  .contact {
-    .fanpage {
-      margin-top: 80px;
-    }
-    .text {
-      font-size: 14px;
-    }
-    .arrow-icon {
-      img {
-        width: 150px;
-      }
-    }
-  }
-  .map {
-    min-height: 400px;
-  }
 
   .carousel {
     .carousel-control-prev {
       background: $freshRed;
-      height: 75px;
-      width: 75px;
+      height: 6rem;
+      width: 6rem;
       border-radius: 100%;
       top: 50%;
       transform: translateY(-50%);
-      left: 3vw;
+      left: 5vw;
     }
     .carousel-control-next {
       background: $freshRed;
-      height: 75px;
-      width: 75px;
+      height: 6rem;
+      width: 6rem;
       border-radius: 100%;
       top: 50%;
       transform: translateY(-50%);
-      right: 3vw;
+      right: 2vw;
     }
   }
 
@@ -237,15 +234,16 @@
       max-width: 35vw !important;
     }
     .bg-cover {
-      height: 630px;
+      height: 1030px;
     }
     .title-area {
-      padding: 130px 170px 0 !important;
+      padding: 12.5rem 0 0 18rem !important;
       position: relative;
       .creator-picture {
         position: absolute;
-        top: 55px;
-        left: 35vw;
+        bottom: 0;
+        left: 44.9vw;
+        z-index: 3;
 
         .right-creator {
           left: 400px;

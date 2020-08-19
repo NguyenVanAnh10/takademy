@@ -4,9 +4,11 @@
     <div class="container-fluid">
       <div class="row m-0 bg-cover">
         <div class="bg-cover-left bg-cover-black col-lg-9 col-12 p-0">
-          <div class="title-area pb-0">
+          <div class="title-area pb-0 h-100">
             <div class="title">
-              <h1 class="text-white display-2 font-weight-bold text-center">
+              <h1
+                class="text-white font-weight-bold text-uppercase font-site-header"
+              >
                 {{.Params.introduction.heading}}
               </h1>
             </div>
@@ -16,18 +18,10 @@
               </p>
             </div>
             <div class="creator-picture">
-              <div class="left-creator">
-                <img
-                  src="{{relURL .Params.introduction.creatorImages.creator1}}"
-                  alt=""
-                />
-              </div>
-              <div class="right-creator">
-                <img
-                  src="{{relURL .Params.introduction.creatorImages.creator2}}"
-                  alt=""
-                />
-              </div>
+              <img
+                src="{{relURL `/images/creators/creator_cover_home.png`}}"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -57,10 +51,12 @@
             {{range .Params.solutions.items}}
             <div class="col-lg-6 col-md-12">
               <div
-                class="card text-white mb-3 bg-transparent border-0 text-center m-auto"
+                class="card h-100 text-white mb-3 bg-transparent border-0 text-center m-auto solution-cards"
                 style="max-width: 20em;"
               >
-                <div class="card-body">
+                <div
+                  class="card-body d-flex flex-column justify-content-between"
+                >
                   <h3 class="card-title font-weight-bold mb-4">
                     {{.title}}
                   </h3>
@@ -128,7 +124,9 @@
               data-interval="10000"
             >
               <div class="slide-content">
-                <div class="row h-100">
+                <div
+                  class="row h-100 d-flex justify-content-center align-items-center"
+                >
                   <div class="bg-piece-left-red col-lg-3 offset-lg-1"></div>
                   <div
                     class="bg-piece-transparent col-lg-8 d-flex align-items-center"

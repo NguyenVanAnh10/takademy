@@ -4,7 +4,7 @@ date: 2020-08-17T11:56:27+07:00
 draft: false
 introduction:
   heading: Takademy
-  description: Takademy trucasda asdfsa asdfa asdf asasf asfda asdf asdf asdf asdf asdf asdf asdf asdf asdf asf asdf fas fs asdf af ad saf af a asfa fas f fa xxxx
+  description: Takademy trực thuộc Appota là công ty chuyên đào tạo - quản lý dành cho những bạn trẻ mong muốn trở thành những nhà sáng tạo nội dung chuyên biệt về game.
   creatorImages:
     creator1: /images/creators/1.png
     creator2: /images/creators/4.png
@@ -14,13 +14,13 @@ solutions:
   subHeading: của chúng tôi
   items:
     - title: Dành cho người sáng tạo nội dung
-      icon: /images/talent.svg
+      icon: /images/talent.png
       subTitle: Phát triển tài năng
-      description: Some quick example text to build on the card title and make up the bulk of the card's content.
-    - title: Dành cho người sáng tạo nội dung
-      icon: /images/support.svg
-      subTitle: Phát triển tài năng
-      description: Some quick example text to build on the card title and make up the bulk of the card's content.
+      description: Takademy trực thuộc Appota là công ty chuyên đào tạo - quản lý dành cho những bạn trẻ mong muốn trở thành những nhà sáng tạo nội dung chuyên biệt về game.
+    - title: Dành cho thương hiệu
+      icon: /images/support.png
+      subTitle: Quảng bá thương hiệu
+      description: Sản xuất nội dung, hỗ trợ sự kiện thương mại & giải trí, giải pháp sản xuất/ quản lý sự kiện cộng đồng trò chơi.
 creators:
   heading: Các nhà sáng tạo
   subHeading: nội dung

@@ -1,18 +1,19 @@
 .footer {
   .copyright {
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 1.2rem;
     font-weight: 900;
     color: #9b9b9b;
   }
   .icons {
     a {
-      font-size: 30px;
+      font-size: 2.3rem;
       color: #9b9b9b;
     }
   }
   .footer-right {
     text-transform: uppercase;
+    font-size: 1.7rem;
     .navbar-nav {
       flex-direction: column !important;
     }
