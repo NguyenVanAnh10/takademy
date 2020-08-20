@@ -11,6 +11,8 @@
 
 body {
   background-color: $mainBackground;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 16px;
   overflow-x: hidden;
 }
@@ -27,7 +29,7 @@ body {
   background-color: $coverBackgroundBlack;
 }
 .font-site-header {
-  font-size: 8.25rem !important;
+  font-size: 7.5rem !important;
 }
 .lead {
   font-size: 1.5rem !important;

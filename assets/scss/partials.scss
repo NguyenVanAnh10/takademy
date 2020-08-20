@@ -1,20 +1,28 @@
 .contact {
   padding: 75px 100px;
+  .contact-heading {
+    h1 {
+      font-size: 7rem;
+    }
+  }
   .address {
     h5 {
-      font-size: 2.25rem;
+      font-size: 1.75rem;
     }
     .text {
-      font-size: 1.5rem;
+      font-size: 1.1rem;
+    }
+    .box {
+      margin-bottom: 4rem;
     }
   }
   .fanpage {
     margin-top: 80px;
-    font-size: 2.2rem;
+    font-size: 1.6rem;
   }
   .arrow-icon {
     img {
-      width: 15rem;
+      width: 12.5rem;
     }
   }
 }
