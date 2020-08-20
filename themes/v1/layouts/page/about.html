@@ -1,26 +1,24 @@
 {{define "main"}}
 <div class="about text-white">
   <div class="container-fluid">
-    <div class="bg-cover bg-cover-black">
+    <div class="bg-cover bg-section-black">
       <div class="introduction">
-        <div class="heading">
-          <div class="row">
-            <div class="col-auto ml-auto">
-              <h1 class="font-weight-bold text-uppercase text-red">
-                Takademy
-              </h1>
-            </div>
+        <div class="row">
+          <div class="col-auto ml-auto">
+            <h1 class="text-red font-largest-header">
+              Takademy
+            </h1>
           </div>
         </div>
         <div class="description">
           <div class="row">
             <div class="col-11 text-box">
-              <p class="lead">
+              <p class="lead description-intro">
                 Được thành lập vào tháng 8/2018, Takademy trực thuộc Appota là
                 công ty chuyên đào tạo - quản lý dành cho những bạn trẻ mong
                 muốn trở thành những nhà sáng tạo nội dung chuyên biệt về game.
               </p>
-              <p class="lead">
+              <p class="lead description-intro">
                 Trong thời gian hoạt động, Takademy luôn đổi mới cách thức hoạt
                 động để có thể liên tục tạo ra được những giá trị tích cực trong
                 cộng động gaming mà vẫn gắn liền với những giá trị cốt lõi ban
@@ -35,20 +33,113 @@
     </div>
   </div>
   <div class="container-fluid">
-    <div class="section">
-      <div class="vision">
+    <div class="vision bg-section-black">
+      <div class="heading-wrapper">
         <div class="heading">
-          <h1 class="font-weight-bold font-site-header">Tầm nhìn</h1>
+          <h1 class="font-title">Tầm nhìn</h1>
         </div>
-        <div class="creators-image">
-          <img class="w-100" src="/images/creators/creators_about.png" alt="" />
+      </div>
+      <div class="content">
+        <div class="creators-image d-flex justify-content-center">
+          <div class="image">
+            <img
+              class="w-100"
+              src="/images/creators/creators_about.png"
+              alt=""
+            />
+          </div>
         </div>
-        <div class="description">
-          <p>Trở thành học viện đào tạo gaming KOLs hàng đầu tại Việt Nam</p>
+      </div>
+      <div class="text-box bg-red">
+        <div class="description py-4 px-3">
+          <p class="p-0">
+            Trở thành học viện đào tạo
+            <span class="font-weight-bolder"> Gaming KOLs </span>hàng đầu tại
+            Việt Nam
+          </p>
         </div>
       </div>
     </div>
   </div>
+  <div class="container-fluid">
+    <div class="container-content bg-section-black">
+      <div class="mission">
+        <div class="heading">
+          <h1 class="font-title">
+            Nhiệm vụ
+          </h1>
+        </div>
+        <div class="content mt-5 d-flex">
+          <div class="text-box bg-red p-5 m-auto">
+            <p>
+              Thay đổi nhận thức, khiến game trở thành sân chơi để giới trẻ đam
+              mê, phấn đấu và tạo ra những giá trị tích cực cho xã hội
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="bg-section-white core-values">
+      <div class="heading bg-red">
+        <h1 class="font-title">Giá trị cốt lõi</h1>
+      </div>
+      <div class="content">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <div
+              class="card bg-card-gray text-white text-center p-3 rounded-0 d-flex justify-content-center"
+            >
+              <div class="card-content d-flex flex-column justify-content-end">
+                <div class="icon my-2">
+                  <img src="{{relURL `/images/fire.png`}}" alt="" />
+                </div>
+                <div class="text">
+                  <h3 class="card-title font-weight-bolder">
+                    Đam mê
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div
+              class="card bg-card-gray text-white text-center p-3 rounded-0 d-flex justify-content-center"
+            >
+              <div class="card-content d-flex flex-column justify-content-end">
+                <div class="icon my-2">
+                  <img src="{{relURL `/images/fire.png`}}" alt="" />
+                </div>
+                <div class="text">
+                  <h3 class="card-title font-weight-bolder">
+                    Đam mê
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div
+              class="card bg-card-gray text-white text-center p-3 rounded-0 d-flex justify-content-center"
+            >
+              <div class="card-content d-flex flex-column justify-content-end">
+                <div class="icon my-2">
+                  <img src="{{relURL `/images/fire.png`}}" alt="" />
+                </div>
+                <div class="text">
+                  <h3 class="card-title font-weight-bolder">
+                    Đam mê
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   {{ partial "section/contact.html" . }}
 </div>
 {{end}}

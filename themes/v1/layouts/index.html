@@ -4,7 +4,7 @@
     <div class="container-fluid">
       <div class="container-cover">
         <div class="row m-0 bg-cover">
-          <div class="bg-cover-left bg-cover-black col-xl-9 col-12 p-0"></div>
+          <div class="bg-cover-left bg-section-black col-xl-9 col-12 p-0"></div>
           <div class="bg-cover-right col-xl-3 d-none d-xl-block">
             <img
               class="img-blur-bird"
@@ -18,14 +18,12 @@
             <div class="col-xl-7">
               <div class="title-area pb-0 h-100">
                 <div class="title">
-                  <h1
-                    class="text-white font-weight-bold text-uppercase font-site-header"
-                  >
+                  <h1 class="text-white text-uppercase font-largest-header">
                     {{.Params.introduction.heading}}
                   </h1>
                 </div>
                 <div class="content">
-                  <p class="lead text-white description">
+                  <p class="lead text-white description-intro">
                     {{.Params.introduction.description}}
                   </p>
                 </div>
@@ -50,10 +48,10 @@
       <div class="row">
         <div class="col-md-12 col-lg-3 d-flex align-items-center mb-4">
           <div class="heading pl-4">
-            <h1 class="font-weight-bold">
+            <h1 class="font-title-header">
               {{.Params.solutions.heading}}
             </h1>
-            <p>{{.Params.solutions.subHeading}}</p>
+            <p class="font-subtitle-header">{{.Params.solutions.subHeading}}</p>
           </div>
         </div>
         <div class="col-md-12 col-lg-8 offset-lg-1">
@@ -89,12 +87,12 @@
   <div class="container-fluid">
     <div class="creators container-content">
       <div class="heading pl-4">
-        <h1 class="font-weight-bold">
+        <h1 class="font-title-header">
           {{.Params.creators.heading}}
         </h1>
-        <p>{{.Params.creators.subHeading}}</p>
+        <p class="font-subtitle-header">{{.Params.creators.subHeading}}</p>
       </div>
-      <div class="content">
+      <div class="content pb-0">
         <div class="owl-carousel owl-theme slider">
           {{range .Params.creators.items}}
           <div class="item">
@@ -114,10 +112,10 @@
   <div class="container-fluid">
     <div class="news container-content">
       <div class="heading pl-4">
-        <h1 class="font-weight-bold">
+        <h1 class="font-title-header">
           {{.Params.news.heading}}
         </h1>
-        <p>{{.Params.news.subHeading}}</p>
+        <p class="font-subtitle-header">{{.Params.news.subHeading}}</p>
       </div>
       <div class="content">
         <div
@@ -175,10 +173,10 @@
   <div class="container-fluid">
     <div class="partners container-content">
       <div class="heading pl-4">
-        <h1 class="font-weight-bold">
+        <h1 class="font-title-header">
           {{.Params.partners.heading}}
         </h1>
-        <p>{{.Params.partners.subHeading}}</p>
+        <p class="font-subtitle-header">{{.Params.partners.subHeading}}</p>
       </div>
       <div class="content">
         <div

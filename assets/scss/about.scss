@@ -1,28 +1,83 @@
 .about {
-  font-size: 3.1rem;
+  font-size: 1.5rem;
   .section {
     padding: 10rem 5rem;
   }
   .introduction {
+  }
+  .heading-wrapper {
     .heading {
+      display: inline-block;
+      position: relative;
       h1 {
-        font-size: 14.5rem;
+        padding: 0 2rem;
+        position: relative;
+        z-index: 2;
       }
     }
-    .lead {
-      font-size: 3.1rem;
+    .heading::after {
+      display: block;
+      content: "";
+      border: 1.2rem solid $freshRed;
+      position: relative;
+      bottom: 1.9rem;
+      z-index: 1;
     }
   }
-
   .description {
     .text-box {
       padding: 5rem 12rem 9rem;
     }
   }
   .vision {
-    .creators-image {
+    position: relative;
+    .image {
+      position: relative;
       img {
-        transform: scale(0.75);
+        max-width: 800px;
+      }
+    }
+    .image::after {
+      content: "";
+      background-image: linear-gradient(to top, #161616, rgba(22, 22, 22, 0));
+      display: block;
+      height: 200px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+    .text-box {
+      position: absolute;
+      bottom: 4rem;
+      right: 0;
+      max-width: 60vw;
+    }
+  }
+  .mission {
+    min-height: 75vh;
+    .content {
+      .text-box {
+        max-width: 70rem;
+      }
+    }
+  }
+  .core-values {
+    padding: 5rem 4rem;
+    .heading {
+      display: inline-block;
+      padding: 0.7rem 2.5rem;
+      position: relative;
+      bottom: 7.5rem;
+      right: 4rem;
+    }
+    .card-content {
+      height: 15rem;
+
+      .icon {
+        img {
+          height: 4rem;
+          float: left;
+        }
       }
     }
   }
