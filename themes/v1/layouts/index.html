@@ -23,7 +23,10 @@
                   </h1>
                 </div>
                 <div class="content">
-                  <p class="lead text-white description-intro">
+                  <p
+                    class="lead text-white description-intro"
+                    style="max-width: 615px;"
+                  >
                     {{.Params.introduction.description}}
                   </p>
                 </div>
@@ -93,7 +96,7 @@
         <p class="font-subtitle-header">{{.Params.creators.subHeading}}</p>
       </div>
       <div class="content pb-0">
-        <div class="owl-carousel owl-theme slider">
+        <div class="owl-carousel owl-carousel-home owl-theme slider">
           {{range .Params.creators.items}}
           <div class="item">
             <div class="card card-creator bg-dark-image border-danger">

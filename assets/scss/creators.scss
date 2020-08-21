@@ -1,0 +1,38 @@
+.creators {
+  .bg-down {
+    height: 8rem;
+  }
+  .list-card {
+    .card {
+      height: 240px;
+      width: 240px;
+    }
+  }
+  .aov {
+    .heading {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+    .box-name {
+      border: 3px solid $gray-300;
+    }
+  }
+  .develop-talent {
+    .icon {
+      width: 10rem;
+    }
+    .nav-item {
+      width: 18rem;
+      overflow: hidden;
+      border: 1px solid $freshRed;
+      .active {
+        background-color: $freshRed;
+        color: white !important;
+      }
+    }
+    .tab-content {
+      padding-top: 3rem;
+    }
+  }
+}

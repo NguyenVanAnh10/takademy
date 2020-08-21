@@ -43,8 +43,9 @@
     crossorigin="anonymous"
   ></script>
   <script src="{{relURL `/js/owl.carousel.min.js`}}"></script>
+  <script src="{{relURL `/js/responsive.js`}}"></script>
   <script>
-    $(".owl-carousel").owlCarousel({
+    $(".owl-carousel-home").owlCarousel({
       loop: true,
       margin: 10,
       nav: true,
@@ -54,6 +55,16 @@
         },
         1000: {
           items: 3,
+        },
+      },
+    });
+    $(".owl-carousel-creators").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      responsive: {
+        600: {
+          items: 1,
         },
       },
     });
