@@ -9,6 +9,8 @@
 @import "./partials.scss";
 @import "./about.scss";
 @import "./creators.scss";
+@import "/brand.scss";
+
 body {
   background-color: $mainBackground;
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -58,10 +60,4 @@ body {
   font-weight: 400;
   font-size: 1.45rem !important;
   line-height: 1.5;
-}
-.d-inline {
-  display: inline;
-}
-.d-inline-block {
-  display: inline-block;
 }

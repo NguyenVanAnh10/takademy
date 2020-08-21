@@ -1,0 +1,68 @@
+.brand {
+  .cover {
+    .bg-cover {
+      height: 800px;
+      width: 100%;
+      position: absolute;
+      .bg-up {
+        height: 65%;
+      }
+      .bg-down {
+        height: 35%;
+      }
+    }
+    .content {
+      height: 800px;
+    }
+    .image-cover {
+    }
+    .image-cover::after {
+      background-image: linear-gradient(
+        to top right,
+        #161616,
+        rgba(22, 22, 22, 0)
+      );
+      content: "";
+      position: absolute;
+      bottom: 0;
+      display: inline-block;
+      height: 100px;
+      width: 85%;
+      z-index: 4;
+      left: 0;
+    }
+  }
+  .service {
+    .content {
+      margin-top: 10rem;
+    }
+    .collapse-box {
+      margin-top: -1rem;
+    }
+    .collapse-btn {
+      min-height: 9rem;
+    }
+
+    #collapseOne {
+      top: 0;
+      left: 0;
+      width: 20rem;
+    }
+    #collapseTwo {
+      top: 0;
+      right: 0;
+      width: 20rem;
+    }
+    #collapseThree {
+      top: 0;
+      width: 20rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .case-study {
+    .heading {
+      padding: 5rem;
+    }
+  }
+}
