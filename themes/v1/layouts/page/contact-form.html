@@ -104,9 +104,58 @@
         ></textarea>
       </div>
       <div class="px-2">
-        <button type="submit" class="btn btn-light">Submit</button>
+        <button
+          type="submit"
+          class="btn btn-light"
+          data-toggle="modal"
+          data-target="#success"
+        >
+          Submit
+        </button>
       </div>
     </form>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="success"
+      tabindex="-1"
+      aria-labelledby="successLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="content text-black">
+              <div class="logo logo-bird-modal">
+                <img
+                  style="width: 100px;"
+                  src="{{relURL `/images/logo full.png`}}"
+                  alt=""
+                />
+              </div>
+              <div class="card border-0">
+                <div class="card-body text-center pt-5">
+                  <h5 class="card-title font-weight-bold">
+                    Chúc mừng bạn đã gửi email thành công!
+                  </h5>
+                  <h5 class="card-title font-weight-bold">
+                    Takademy sẽ sớm liên hệ với bạn
+                  </h5>
+                  <a
+                    href="#"
+                    class="btn bg-red text-white mt-3"
+                    style="width: 50%;"
+                    data-dismiss="modal"
+                    >OK</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 {{end}}
