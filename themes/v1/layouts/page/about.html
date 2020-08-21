@@ -6,7 +6,7 @@
         <div class="row">
           <div class="col-auto ml-auto">
             <h1 class="text-red font-largest-header text-uppercase">
-              Takademy
+              {{.Params.introduction.heading}}
             </h1>
           </div>
         </div>
@@ -14,17 +14,10 @@
           <div class="row">
             <div class="col-11 text-box">
               <p class="lead description-intro">
-                Được thành lập vào tháng 8/2018, Takademy trực thuộc Appota là
-                công ty chuyên đào tạo - quản lý dành cho những bạn trẻ mong
-                muốn trở thành những nhà sáng tạo nội dung chuyên biệt về game.
+                {{.Params.introduction.intro1}}
               </p>
               <p class="lead description-intro">
-                Trong thời gian hoạt động, Takademy luôn đổi mới cách thức hoạt
-                động để có thể liên tục tạo ra được những giá trị tích cực trong
-                cộng động gaming mà vẫn gắn liền với những giá trị cốt lõi ban
-                đầu. Hiện nay, Takademy hướng đến những nội dung giải trí, đời
-                sống,... góp phần đem đến những trải nghiệm mới năng động, nhiều
-                màu sắc cho thế hệ những người trẻ Việt Nam.
+                {{.Params.introduction.intro2}}
               </p>
             </div>
           </div>
@@ -36,26 +29,20 @@
     <div class="vision bg-section-black">
       <div class="heading-wrapper">
         <div class="heading">
-          <h1 class="font-title">Tầm nhìn</h1>
+          <h1 class="font-title">{{.Params.vision.heading}}</h1>
         </div>
       </div>
       <div class="content">
         <div class="creators-image d-flex justify-content-center">
           <div class="image">
-            <img
-              class="w-100"
-              src="/images/creators/creators_about.png"
-              alt=""
-            />
+            <img class="w-100" src="{{relURL .Params.vision.image}}" alt="" />
           </div>
         </div>
       </div>
       <div class="text-box bg-red">
         <div class="description py-4 px-3">
           <p class="p-0">
-            Trở thành học viện đào tạo
-            <span class="font-weight-bolder"> Gaming KOLs </span>hàng đầu tại
-            Việt Nam
+            {{.Params.vision.description}}
           </p>
         </div>
       </div>
@@ -66,14 +53,13 @@
       <div class="mission">
         <div class="heading">
           <h1 class="font-title">
-            Nhiệm vụ
+            {{.Params.mission.heading}}
           </h1>
         </div>
         <div class="content mt-5 d-flex">
           <div class="text-box bg-red p-5 m-auto">
             <p>
-              Thay đổi nhận thức, khiến game trở thành sân chơi để giới trẻ đam
-              mê, phấn đấu và tạo ra những giá trị tích cực cho xã hội
+              {{.Params.mission.description}}
             </p>
           </div>
         </div>
@@ -83,58 +69,28 @@
   <div class="">
     <div class="bg-section-white core-values">
       <div class="heading bg-red">
-        <h1 class="font-title">Giá trị cốt lõi</h1>
+        <h1 class="font-title">{{.Params.coreValues.heading}}</h1>
       </div>
       <div class="content">
         <div class="row">
+          {{range .Params.coreValues.items }}
           <div class="col-md-4 mb-3">
             <div
               class="card bg-card-gray text-white text-center p-3 rounded-0 d-flex justify-content-center"
             >
               <div class="card-content d-flex flex-column justify-content-end">
                 <div class="icon my-2">
-                  <img src="{{relURL `/images/fire.png`}}" alt="" />
+                  <img src="{{relURL .icon}}" alt="" />
                 </div>
                 <div class="text">
                   <h3 class="card-title font-weight-bolder">
-                    Đam mê
+                    {{.title}}
                   </h3>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div
-              class="card bg-card-gray text-white text-center p-3 rounded-0 d-flex justify-content-center"
-            >
-              <div class="card-content d-flex flex-column justify-content-end">
-                <div class="icon my-2">
-                  <img src="{{relURL `/images/fire.png`}}" alt="" />
-                </div>
-                <div class="text">
-                  <h3 class="card-title font-weight-bolder">
-                    Đam mê
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div
-              class="card bg-card-gray text-white text-center p-3 rounded-0 d-flex justify-content-center"
-            >
-              <div class="card-content d-flex flex-column justify-content-end">
-                <div class="icon my-2">
-                  <img src="{{relURL `/images/fire.png`}}" alt="" />
-                </div>
-                <div class="text">
-                  <h3 class="card-title font-weight-bolder">
-                    Đam mê
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </div>
+          {{end}}
         </div>
       </div>
     </div>
