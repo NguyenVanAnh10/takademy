@@ -2,3 +2,33 @@ baseURL: "http://example.org/"
 languageCode: "en-us"
 title: "My New Hugo Site"
 theme: v1
+languages:
+  vi:
+    languageName: Tiếng Việt
+    weight: 1
+  en:
+    languageName: English
+    weight: 2
+defaultContentLanguage: vi
+menus:
+  main:
+    - identifier: home
+      name: home
+      url: /
+      weight: 1
+    - identifier: about
+      name: about
+      url: /about/
+      weight: 2
+    - identifier: creator
+      name: creator
+      url: /creator/
+      weight: 3
+    - identifier: brand
+      name: brand
+      url: /brand/
+      weight: 4
+    - identifier: contact
+      name: contact
+      url: /contact/
+      weight: 5

@@ -21,40 +21,18 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item d-flex mx-2 active">
-            <a class="nav-link font-weight-bolder text-white m-auto" href="/"
-              >Trang chủ
-              <span class="sr-only">(current)</span>
+          {{ $currentPage := . }} {{ $baseURL := urls.Parse .Site.BaseURL }}
+          {{range .Site.Menus.main}}
+          <li
+            class="nav-item d-flex mx-2 {{ if eq $currentPage.URL .URL }}active{{ end }}"
+          >
+            <a
+              class="nav-link font-weight-bolder text-white m-auto"
+              href="{{.URL | absLangURL}}"
+              >{{i18n (printf "menu-%s" .Identifier)}}
             </a>
           </li>
-          <li class="nav-item d-flex mx-2">
-            <a
-              class="nav-link font-weight-bolder text-white m-auto"
-              href="/about"
-              >Giới thiệu</a
-            >
-          </li>
-          <li class="nav-item d-flex mx-2">
-            <a
-              class="nav-link font-weight-bolder text-white m-auto"
-              href="/creators"
-              >Nhà sáng tạo nội dung</a
-            >
-          </li>
-          <li class="nav-item d-flex mx-2">
-            <a
-              class="nav-link font-weight-bolder text-white m-auto"
-              href="/brand"
-              >Thương hiệu</a
-            >
-          </li>
-          <li class="nav-item d-flex mx-2">
-            <a
-              class="nav-link font-weight-bolder text-white m-auto"
-              href="/contact"
-              >Tham gia ngay</a
-            >
-          </li>
+          {{end}}
         </ul>
       </div>
     </div>
