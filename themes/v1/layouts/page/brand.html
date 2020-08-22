@@ -5,32 +5,29 @@
       <div class="bg-up bg-section-black"></div>
       <div class="bg-down">
         <div class="row h-100">
-          <div class="col-4 bg-section-black h-100"></div>
-          <div class="col-8 bg-red h-100"></div>
+          <div class="col-lg-4 d-none d-lg-block bg-section-black h-100"></div>
+          <div class="col-lg-8 bg-red h-100"></div>
         </div>
       </div>
     </div>
     <div class="content">
       <div class="row h-100">
-        <div class="col-6 h-100 image-cover">
+        <div class="col-lg-6 h-100 image-cover d-none d-lg-block">
           <img
             class="h-100 w-100"
-            src="{{relURL `/images/creators/creators_cover_brand.png`}}"
+            src="{{relURL .Params.introduction.image}}"
             alt=""
           />
         </div>
-        <div class="col-6 h-100">
-          <div class="description">
+        <div class="col-lg-6 col h-100">
+          <div class="description px-5">
             <p class="description-intro">
-              Với sức ảnh hưởng và khả năng lan tỏa mạnh mẽ của các Nhà sáng tạo
-              nội dung, Takademy đồng hành cùng thương hiệu đem đến những chiến
-              dịch tiếp cận lượng lớn người theo dõi cũng như người hâm mộ và
-              thu hút các khách hàng tiềm năng phù hợp.
+              {{.Params.introduction.intro}}
             </p>
           </div>
           <div class="heading">
             <h1 class="font-largest-header text-uppercase">
-              Takademy
+              {{.Params.introduction.heading}}
             </h1>
           </div>
         </div>
@@ -40,9 +37,11 @@
   <div class="service bg-section-black">
     <div class="container-content">
       <div class="heading">
-        <h1 class="font-largest-header">
-          Dịch vụ
-        </h1>
+        <div class="real-word">
+          <h1 class="font-largest-header">
+            {{.Params.service.heading}}
+          </h1>
+        </div>
       </div>
       <div class="content">
         <div class="accordion" id="accordionExample">
@@ -59,7 +58,7 @@
                       aria-expanded="false"
                       aria-controls="collapseOne"
                     >
-                      Sản xuất nội dung quảng bá thương hiệu
+                      {{.Params.service.content.collapseOne.title}}
                     </button>
                   </h2>
                 </div>
@@ -72,14 +71,11 @@
                 >
                   <div class="card bg-red">
                     <div class="card-body">
-                      <h5 class="card-title font-weight-bolder">
-                        Sản xuất nội dung quảng bá thương hiệu
-                      </h5>
+                      <h3 class="card-title font-weight-bolder">
+                        {{.Params.service.content.collapseOne.title}}
+                      </h3>
                       <p class="card-text">
-                        Những nội dung với nhiều hình thức phong phú được sản
-                        xuất bởi chính các nhà sáng tạo, giúp thương hiệu tạo
-                        nhận biết và lan tỏa thông điệp đến với đa dạng tập
-                        người dùng trên mọi nền tảng.
+                        {{.Params.service.content.collapseOne.description}}
                       </p>
                     </div>
                   </div>
@@ -100,7 +96,7 @@
                       aria-expanded="false"
                       aria-controls="collapseTwo"
                     >
-                      Hỗ trợ quảng bá sự kiện thương mại & giải trí
+                      {{.Params.service.content.collapseTwo.title}}
                     </button>
                   </h2>
                 </div>
@@ -112,13 +108,11 @@
                 >
                   <div class="card bg-red">
                     <div class="card-body">
-                      <h5 class="card-title font-weight-bolder">
-                        Sản xuất nội dung quảng bá thương hiệu
-                      </h5>
+                      <h3 class="card-title font-weight-bolder">
+                        {{.Params.service.content.collapseTwo.title}}
+                      </h3>
                       <p class="card-text">
-                        Tham dự và hỗ trợ quảng bá những sự kiện thương mại/giải
-                        trí của thương hiệu, giúp thương hiệu tiếp cận số lượng
-                        lớn người hâm mộ các Nhà sáng tạo nội dung của Takademy.
+                        {{.Params.service.content.collapseTwo.description}}
                       </p>
                     </div>
                   </div>
@@ -137,7 +131,7 @@
                       aria-expanded="false"
                       aria-controls="collapseThree"
                     >
-                      Giải pháp tổ chức/quản lý sự kiện trong cộng đồng gamer
+                      {{.Params.service.content.collapseThree.title}}
                     </button>
                   </h2>
                 </div>
@@ -149,15 +143,11 @@
                 >
                   <div class="card bg-red">
                     <div class="card-body">
-                      <h5 class="card-title font-weight-bolder">
-                        Sản xuất nội dung quảng bá thương hiệu
-                      </h5>
+                      <h3 class="card-title font-weight-bolder">
+                        {{.Params.service.content.collapseThree.title}}
+                      </h3>
                       <p class="card-text">
-                        Dựa trên kinh nghiệm tổ chức và quản lý sự kiện, phát
-                        triển cộng đồng của Takademy, thương hiệu sẽ có cơ hội
-                        thực hiện các hoạt động dành cho cộng đồng gamer nhằm
-                        xuất hiện thường xuyên hơn và tăng tương tác với người
-                        tiêu dùng.
+                        {{.Params.service.content.collapseThree.description}}
                       </p>
                     </div>
                   </div>
@@ -172,34 +162,34 @@
   </div>
   <div class="case-study bg-section-black">
     <div class="heading">
-      <div class="heading1">
+      <div class="heading-box">
         <h1 class="font-largest-header">
-          Case
-        </h1>
-      </div>
-      <div class="heading2">
-        <h1 class="font-largest-header">
-          Student
+          {{.Params.caseStudy.heading}}
         </h1>
       </div>
     </div>
-    <div class="content">
+    <div class="content container-content px-5">
       <div
         id="carouselExampleInterval"
         class="carousel slide"
         data-ride="carousel"
       >
         <div class="carousel-inner">
-          <div class="carousel-item active" data-interval="10000">
+          {{range $i,$e := .Params.caseStudy.items}}
+          <div
+            class="carousel-item {{if eq $i 0}} active {{end}}"
+            data-interval="10000"
+          >
             <div class="slide-content">
               <div
                 class="row h-100 d-flex justify-content-center align-items-center"
               >
-                <div class="bg-piece-left-red col-lg-3 offset-lg-1">
-                  <div class="slide-image">
+                <div class="bg-piece-left-red">
+                  <div class="slide-image d-flex">
                     <img
-                      src="{{relURL `/images/brand_slide_1.jpg`}}"
-                      class=""
+                      src="{{relURL .image}}"
+                      class="m-auto"
+                      style="width: 75vw;"
                       alt="..."
                     />
                   </div>
@@ -208,24 +198,7 @@
               </div>
             </div>
           </div>
-          <div class="carousel-item" data-interval="10000">
-            <div class="slide-content">
-              <div
-                class="row h-100 d-flex justify-content-center align-items-center"
-              >
-                <div class="bg-piece-left-red col-lg-3 offset-lg-1">
-                  <div class="slide-image">
-                    <img
-                      src="{{relURL `/images/brand_slide_1.jpg`}}"
-                      class=""
-                      alt="..."
-                    />
-                  </div>
-                </div>
-                <div class="bg-transparent col-lg-8 d-none d-lg-block"></div>
-              </div>
-            </div>
-          </div>
+          {{end}}
         </div>
         <a
           class="carousel-control-prev"
