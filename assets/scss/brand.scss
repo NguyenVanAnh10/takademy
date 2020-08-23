@@ -66,6 +66,7 @@
     }
     .collapse-box {
       margin-top: -1rem;
+      border: 3px solid $freshRed;
     }
     .collapse-btn {
       min-height: 9rem;
@@ -77,6 +78,9 @@
       font-size: 1.45rem;
     }
 
+    .blur-background {
+      filter: blur(0.2rem);
+    }
     #collapseOne {
       top: -100%;
       z-index: 3;
