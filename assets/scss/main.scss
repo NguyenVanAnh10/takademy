@@ -71,3 +71,7 @@ body {
     0.5px -0.5px 0 $gray-400, 0.5px -1px 0 $gray-400;
   color: $coverBackgroundBlack;
 }
+.word-background {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.05);
+}

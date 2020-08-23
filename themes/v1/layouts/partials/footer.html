@@ -63,10 +63,34 @@
       margin: 10,
       nav: true,
       responsive: {
-        600: {
+        0: {
           items: 1,
         },
       },
+      animateOut: "fadeOut",
+      autoplay: true,
+      autoplayTimeout: 4000,
+    });
+    const creators = [
+      { id: 1, creator: "creator-1" },
+      { id: 2, creator: "creator-2" },
+      { id: 3, creator: "creator-3" },
+      { id: 4, creator: "creator-4" },
+      { id: 5, creator: "creator-5" },
+      { id: 6, creator: "creator-6" },
+      { id: 7, creator: "creator-7" },
+      { id: 8, creator: "creator-8" },
+    ];
+    $(".owl-carousel-creators").on("changed.owl.carousel", function (event) {
+      creators.forEach(function (e, i) {
+        if (e.id === event.page?.index + 1) {
+          $(`#${e.creator}`).removeClass("d-none");
+          $(`#${e.creator}`).addClass("d-block");
+        } else {
+          $(`#${e.creator}`).addClass("d-none");
+          $(`#${e.creator}`).removeClass("d-block");
+        }
+      });
     });
     $(".carousel").carousel({
       interval: 2000,

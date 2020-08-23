@@ -1,6 +1,6 @@
 let widthWindow = $(window).width();
 let removeStatus = false;
-const takademyCreatorGroupBtn = $("#xxx");
+const takademyCreatorGroupBtn = $("#creator-tab-pannel");
 
 $(function () {
   if (widthWindow < 1105) {
