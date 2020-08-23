@@ -1,0 +1,40 @@
+<header class="header">
+  <nav class="navbar navbar-expand-xl navbar-dark py-0">
+    <div class="container-fluid container-header">
+      <a class="navbar-brand" href="#">
+        <img
+          class="colorful-logo"
+          src="{{relURL `/images/logo full.png`}}"
+          alt=""
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          {{ $currentPage := . }} {{ $baseURL := urls.Parse .Site.BaseURL }}
+          {{range .Site.Menus.main}}
+          <li
+            class="nav-item d-flex mx-2 {{ if eq $currentPage.URL .URL }}active{{ end }}"
+          >
+            <a
+              class="nav-link font-weight-bolder text-white m-auto"
+              href="{{.URL | absLangURL}}"
+              >{{i18n (printf "menu-%s" .Identifier)}}
+            </a>
+          </li>
+          {{end}}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

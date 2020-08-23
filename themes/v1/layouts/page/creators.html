@@ -1,0 +1,199 @@
+{{define "main"}}
+<div class="creators text-white position-relative">
+  <div class="takademy-background word-background">
+    <h1 class="font-largest-header text-uppercase">
+      {{.Params.introduction.wordBackground}}
+    </h1>
+  </div>
+  <div class="cover">
+    <div class="bg-up bg-section-black container-content">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="font-largest-header">{{.Params.introduction.heading}}</h1>
+        </div>
+        <div class="col-lg-6">
+          <div class="description px-5 px-lg-0">
+            <p class="description-intro">
+              {{.Params.introduction.description}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-down bg-red"></div>
+  </div>
+  <div class="why-us">
+    <div class="bg-section-black container-content">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="heading">
+            <h1 class="font-title">
+              {{safeHTML .Params.whyus.heading}}
+            </h1>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="row list-card position-relative">
+            {{range .Params.whyus.items}}
+            <div class="col-lg-6 mb-5">
+              <div class="card bg-transparent border-danger rounded-0">
+                <div class="card-body card-content">
+                  <p class="card-text text-center">
+                    {{.title}}
+                  </p>
+                </div>
+              </div>
+            </div>
+            {{end}}
+            <div class="background-img">
+              <img src="{{relURL .Params.whyus.imageBackground}}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="show-case">
+    <div class="bg-section-black pb-5 px-0">
+      <div class="heading">
+        {{range .Params.showCase.heading.items}}
+        <div class="{{.class}}">
+          <h1 class="font-largest-header text-center mb-0">{{.title}}</h1>
+        </div>
+        {{end}}
+      </div>
+    </div>
+  </div>
+
+  <div class="aov">
+    <div class="bg-section-black container-content px-0 pt-0">
+      <div class="box-content px-5 pb-5 pt-0">
+        <div class="heading">
+          <h1 class="text-uppercase font-weight-bolder">
+            {{.Params.aov.heading}}
+          </h1>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 d-flex">
+            <div
+              class="owl-carousel owl-carousel-creators owl-theme slider m-auto"
+            >
+              {{range .Params.aov.creators.images}}
+              <div id="{{.id}}" class="item py-5">
+                <div class="card card-creator bg-section-black border-danger">
+                  <img
+                    src="{{relURL .image}}"
+                    class="card-img-top img-creator h-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              {{end}}
+            </div>
+          </div>
+          <div class="col-lg-6">
+            {{range $i,$e := .Params.aov.creators.informations}}
+            {{$achievementsNumber := len .achievements}}
+            <div
+              id="{{.id}}"
+              class="info-area pt-5 {{if eq $i 0 }} d-block {{else}}d-none {{end}}"
+            >
+              <div
+                class="reactions d-flex {{if le $achievementsNumber 4}} flex-column text-center{{end}}"
+              >
+                {{range .index}}
+                <div class="number-detail flex-grow-1">
+                  <div
+                    class="number {{if le $achievementsNumber 4}} border-reaction-box {{end}}"
+                  >
+                    <h1 class="text-red font-weight-bold">{{.value}}</h1>
+                  </div>
+                  <div class="name mt-3">
+                    <p class="text-name">{{.title}}</p>
+                  </div>
+                </div>
+                {{end}}
+              </div>
+              <div class="detial-info mt-5">
+                <ul class="list-unstyled">
+                  {{range .achievements}}
+                  <li class="my-4">
+                    <h5 class="text-top text-red d-inline">{{.title}}</h5>
+                    <p class="desc-top d-inline">
+                      {{.subTitle}}
+                    </p>
+                  </li>
+                  {{end}}
+                </ul>
+              </div>
+              <div class="box-name py-2 px-4 d-flex mt-5">
+                <h1 class="font-weight-bold d-inline-block ml-auto">
+                  {{.name}}
+                </h1>
+              </div>
+            </div>
+            {{end}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="develop-talent">
+    <div class="bg-section-white container-content">
+      <div class="heading">
+        <h1 class="font-title text-black">
+          {{safeHTML .Params.developTalent.talent}}
+        </h1>
+      </div>
+      <div class="content">
+        <ul
+          class="nav nav-pills my-5 list-group list-group-horizontal justify-content-center"
+          id="creator-tab-pannel"
+          role="tablist"
+        >
+          {{range $i,$e := .Params.developTalent.content.tabButtons}}
+          <li class="nav-item list-group-item p-0" role="presentation">
+            <a
+              class="item nav-link d-flex rounded-0 h-100 text-center text-black {{if eq $i 0}}active{{end}}"
+              id="{{.id}}-tab"
+              href="#{{.id}}"
+              role="tab"
+              data-toggle="tab"
+              aria-controls="{{.id}}"
+              aria-selected="true"
+              ><span class="m-auto">
+                {{.title}}
+              </span></a
+            >
+          </li>
+          {{end}}
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          {{range $i,$e := .Params.developTalent.content.tabContents}}
+          <div
+            class="tab-pane fade {{if eq $i 0}}show active {{end}}"
+            id="{{.id}}"
+            role="tabpanel"
+            aria-labelledby="{{.id}}-tab"
+          >
+            <div class="row">
+              <div class="col-md-6 text-center">
+                <img class="icon" src="{{relURL .image}}" alt="" />
+              </div>
+              <div class="col-lg-6 py-5">
+                <p class="description text-black">
+                  {{.description}}
+                </p>
+              </div>
+            </div>
+          </div>
+          {{end}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ partial "section/contact.html" . }}
+</div>
+{{end}}

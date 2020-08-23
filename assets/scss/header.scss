@@ -1,0 +1,44 @@
+.header {
+  .colorful-logo {
+    height: 6rem;
+  }
+  .nav-item {
+    padding: 0 1rem;
+    .nav-link {
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+  }
+  .active {
+    background-color: #281e1d;
+    background-image: linear-gradient(to top, #281e1d, #1d1d1d);
+    border-bottom: 2px solid $freshRed;
+    .nav-link {
+      color: $freshRed !important;
+    }
+  }
+  .navbar-toggler {
+    border: none;
+  }
+  .container-header {
+    align-items: unset !important;
+    padding: unset !important;
+    .navbar-collapse {
+      align-items: unset;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+  }
+  @include media-breakpoint-up(xl) {
+    .colorful-logo {
+      height: 9rem;
+    }
+    .nav-item {
+      padding: 0 1rem;
+      .nav-link {
+        font-weight: 600;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

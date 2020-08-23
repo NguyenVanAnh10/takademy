@@ -1,0 +1,101 @@
+{{define "main"}}
+<div class="about text-white">
+  <div class="">
+    <div class="bg-cover bg-section-black">
+      <div class="introduction">
+        <div class="row">
+          <div class="col-auto ml-auto">
+            <h1 class="text-red font-largest-header text-uppercase">
+              {{.Params.introduction.heading}}
+            </h1>
+          </div>
+        </div>
+        <div class="description">
+          <div class="row">
+            <div class="col-11 text-box">
+              <p class="lead description-intro">
+                {{.Params.introduction.intro1}}
+              </p>
+              <p class="lead description-intro">
+                {{.Params.introduction.intro2}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="">
+    <div class="vision bg-section-black">
+      <div class="heading-wrapper">
+        <div class="heading">
+          <h1 class="font-title">{{.Params.vision.heading}}</h1>
+        </div>
+      </div>
+      <div class="content">
+        <div class="creators-image d-flex justify-content-center">
+          <div class="image">
+            <img class="w-100" src="{{relURL .Params.vision.image}}" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="text-box bg-red">
+        <div class="description py-4 px-3">
+          <p class="p-0">
+            {{ safeHTML .Params.vision.description}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="">
+    <div class="container-content bg-section-black">
+      <div class="mission">
+        <div class="heading">
+          <h1 class="font-title">
+            {{.Params.mission.heading}}
+          </h1>
+        </div>
+        <div class="content mt-5 d-flex">
+          <div class="text-box bg-red p-5 m-auto">
+            <p>
+              {{.Params.mission.description}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="">
+    <div class="bg-section-white core-values">
+      <div class="heading bg-red">
+        <h1 class="font-title">{{.Params.coreValues.heading}}</h1>
+      </div>
+      <div class="content">
+        <div class="row">
+          {{range .Params.coreValues.items }}
+          <div class="col-md-4 mb-3">
+            <div
+              class="card bg-card-gray text-white text-center p-3 rounded-0 d-flex justify-content-center"
+            >
+              <div class="card-content d-flex flex-column justify-content-end">
+                <div class="icon my-2">
+                  <img src="{{relURL .icon}}" alt="" />
+                </div>
+                <div class="text">
+                  <h3 class="card-title font-weight-bolder">
+                    {{.title}}
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{end}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ partial "section/contact.html" . }}
+</div>
+{{end}}

@@ -1,0 +1,226 @@
+{{define "main"}}
+<div class="brand text-white">
+  <div class="cover">
+    <div class="bg-cover">
+      <div class="bg-up bg-section-black"></div>
+      <div class="bg-down">
+        <div class="row h-100">
+          <div class="col-lg-4 d-none d-lg-block bg-section-black h-100"></div>
+          <div class="col-lg-8 bg-red h-100"></div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="row h-100">
+        <div class="col-lg-6 h-100 image-cover d-none d-lg-block">
+          <img
+            class="h-100 w-100"
+            src="{{relURL .Params.introduction.image}}"
+            alt=""
+          />
+        </div>
+        <div class="col-lg-6 col h-100">
+          <div class="description px-5">
+            <p class="description-intro">
+              {{.Params.introduction.intro}}
+            </p>
+          </div>
+          <div class="heading">
+            <h1 class="font-largest-header text-uppercase">
+              {{.Params.introduction.heading}}
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="service bg-section-black">
+    <div class="container-content">
+      <div class="heading">
+        <div class="real-word">
+          <h1 class="font-largest-header">
+            {{.Params.service.heading}}
+          </h1>
+        </div>
+      </div>
+      <div class="content">
+        <div class="accordion" id="accordionExample">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="collapse-box position-relative">
+                <div class="card btn-card rounded-0" id="headingOne">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn text-red w-100 text-center text-left collapse-btn"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseOne"
+                      aria-expanded="false"
+                      aria-controls="collapseOne"
+                    >
+                      {{.Params.service.content.collapseOne.title}}
+                    </button>
+                  </h2>
+                </div>
+
+                <div
+                  id="collapseOne"
+                  class="collapse position-absolute"
+                  aria-labelledby="headingOne"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card bg-red">
+                    <div class="card-body">
+                      <h3 class="card-title font-weight-bolder">
+                        {{.Params.service.content.collapseOne.title}}
+                      </h3>
+                      <p class="card-text">
+                        {{.Params.service.content.collapseOne.description}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5"></div>
+            <div class="col-md-5"></div>
+            <div class="col-md-7">
+              <div class="collapse-box position-relative">
+                <div class="card btn-card rounded-0" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn text-red w-100 text-center text-left collapse-btn collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      {{.Params.service.content.collapseTwo.title}}
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="collapse position-absolute"
+                  aria-labelledby="headingTwo"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card bg-red">
+                    <div class="card-body">
+                      <h3 class="card-title font-weight-bolder">
+                        {{.Params.service.content.collapseTwo.title}}
+                      </h3>
+                      <p class="card-text">
+                        {{.Params.service.content.collapseTwo.description}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7 offset-md-1">
+              <div class="collapse-box position-relative">
+                <div class="card btn-card rounded-0" id="headingThree">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn text-red w-100 text-center text-left collapse-btn collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      {{.Params.service.content.collapseThree.title}}
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapseThree"
+                  class="collapse position-absolute"
+                  aria-labelledby="headingThree"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card bg-red">
+                    <div class="card-body">
+                      <h3 class="card-title font-weight-bolder">
+                        {{.Params.service.content.collapseThree.title}}
+                      </h3>
+                      <p class="card-text">
+                        {{.Params.service.content.collapseThree.description}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="case-study bg-section-black">
+    <div class="heading">
+      <div class="heading-box">
+        <h1 class="font-largest-header">
+          {{.Params.caseStudy.heading}}
+        </h1>
+      </div>
+    </div>
+    <div class="content container-content px-5">
+      <div
+        id="carouselExampleInterval"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner">
+          {{range $i,$e := .Params.caseStudy.items}}
+          <div
+            class="carousel-item {{if eq $i 0}} active {{end}}"
+            data-interval="10000"
+          >
+            <div class="slide-content">
+              <div
+                class="row h-100 d-flex justify-content-center align-items-center"
+              >
+                <div class="bg-piece-left-red">
+                  <div class="slide-image d-flex">
+                    <img
+                      src="{{relURL .image}}"
+                      class="m-auto"
+                      style="width: 75vw;"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <div class="bg-transparent col-lg-8 d-none d-lg-block"></div>
+              </div>
+            </div>
+          </div>
+          {{end}}
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleInterval"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleInterval"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  {{ partial "section/contact.html" . }}
+</div>
+{{end}}

@@ -1,0 +1,158 @@
+.brand {
+  .cover {
+    .bg-cover {
+      height: 800px;
+      width: 100%;
+      position: absolute;
+      .bg-up {
+        height: 65%;
+      }
+      .bg-down {
+        height: 35%;
+      }
+    }
+    .content {
+      height: 800px;
+      .description {
+        padding: 8rem 0 2rem 0;
+      }
+      .heading {
+        margin-top: 6rem;
+      }
+    }
+    .image-cover {
+    }
+    .image-cover::after {
+      background-image: linear-gradient(
+        to top right,
+        #161616,
+        rgba(22, 22, 22, 0)
+      );
+      content: "";
+      position: absolute;
+      bottom: 0;
+      display: inline-block;
+      height: 100px;
+      width: 85%;
+      z-index: 4;
+      left: 0;
+    }
+  }
+  .service {
+    .heading {
+      .real-word {
+        position: relative;
+        h1 {
+          position: relative;
+          z-index: 2;
+        }
+      }
+      .real-word::after {
+        content: "Dịch vụ";
+        text-shadow: -0.25px 0.25px 0 $gray-400, 0.25px 0.5px 0 $gray-400,
+          0.25px -0.25px 0 $gray-400, 0.25px -0.7px 0 $gray-400;
+        color: $coverBackgroundBlack;
+        font-size: $fontLargestHeader;
+        font-weight: bold;
+        display: block;
+        position: absolute;
+        top: 3rem;
+        z-index: 1;
+        left: 14rem;
+      }
+    }
+    .content {
+      margin-top: 10rem;
+    }
+    .collapse-box {
+      margin-top: -1rem;
+      border: 3px solid $freshRed;
+    }
+    .collapse-btn {
+      min-height: 9rem;
+      font-size: 1.7rem;
+      padding: 1rem 2rem;
+      font-weight: bolder;
+    }
+    .text-card {
+      font-size: 1.45rem;
+    }
+
+    .blur-background {
+      filter: blur(0.2rem);
+    }
+    #collapseOne {
+      top: -100%;
+      z-index: 3;
+      transform: translateY(50%);
+      right: 0;
+      width: 75%;
+    }
+    #collapseTwo {
+      top: -100%;
+      z-index: 3;
+      transform: translateY(50%);
+      left: 0;
+      width: 75%;
+    }
+    #collapseThree {
+      top: -100%;
+      z-index: 3;
+      width: 75%;
+      left: 50%;
+      transform: translateY(35%);
+      left: 25%;
+    }
+  }
+  .case-study {
+    .heading-box {
+      padding: 5rem;
+      position: relative;
+      h1 {
+        position: relative;
+        z-index: 2;
+      }
+    }
+    .heading-box::before {
+      content: "";
+      display: block;
+      border: 1rem solid $freshRed;
+      width: 22rem;
+      border: 1rem solid #eb1d27;
+      position: absolute;
+      top: 12rem;
+      left: 14rem;
+      z-index: 1;
+    }
+    .heading-box::after {
+      content: "Study";
+      font-size: $fontLargestHeader;
+      position: absolute;
+      top: 0;
+      top: 9rem;
+      font-weight: bolder;
+      left: 14rem;
+      z-index: 2;
+    }
+  }
+  .carousel {
+    .carousel-control-prev {
+      background: $freshRed;
+      height: 3rem;
+      width: 3rem;
+      border-radius: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 3vw;
+    }
+    .carousel-control-next {
+      background: $freshRed;
+      height: 3rem;
+      width: 3rem;
+      border-radius: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 2vw;
+    }
+  }
+}

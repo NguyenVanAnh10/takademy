@@ -1,0 +1,77 @@
+@import "./functions";
+@import "./breakpoints";
+@import "./variables";
+@import "./bootstrap.min.scss";
+@import "./owl.carousel.scss";
+@import "./header.scss";
+@import "./footer.scss";
+@import "./home.scss";
+@import "./partials.scss";
+@import "./about.scss";
+@import "./creators.scss";
+@import "/brand.scss";
+@import "./modal.scss";
+
+body {
+  background-color: $mainBackground;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+.bg-transparent {
+  background-color: transparent;
+}
+.bg-red {
+  background-color: $freshRed;
+}
+.text-red {
+  color: $freshRed !important;
+}
+.text-black {
+  color: $coverBackgroundBlack !important;
+}
+.bg-section-black {
+  background-color: $coverBackgroundBlack;
+}
+.bg-section-white {
+  background-color: $backGroundWhite;
+}
+.bg-card-gray {
+  background-color: $gray-800;
+}
+.font-largest-header {
+  font-size: $fontLargestHeader !important;
+  font-weight: bold;
+}
+.font-title {
+  font-size: 2.75rem !important;
+  font-weight: bold;
+}
+.font-subtitle {
+  font-size: 2rem;
+}
+.lead {
+  font-size: 1.5rem !important;
+}
+.container-content {
+  padding: 8rem 7.5rem;
+}
+.description-intro {
+  font-weight: 400;
+  font-size: 1.45rem !important;
+  line-height: 1.5;
+}
+.no-border {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.text-shadow {
+  text-shadow: -0.5px 0.5px 0 $gray-400, 0.5px 0.5px 0 $gray-400,
+    0.5px -0.5px 0 $gray-400, 0.5px -1px 0 $gray-400;
+  color: $coverBackgroundBlack;
+}
+.word-background {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.05);
+}

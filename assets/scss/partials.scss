@@ -1,0 +1,31 @@
+.contact {
+  padding: 75px 100px;
+  .contact-heading {
+    h1 {
+      font-size: 7rem;
+    }
+  }
+  .address {
+    h5 {
+      font-size: 1.75rem;
+    }
+    .text {
+      font-size: 1.1rem;
+    }
+    .box {
+      margin-bottom: 4rem;
+    }
+  }
+  .fanpage {
+    margin-top: 80px;
+    font-size: 1.6rem;
+  }
+  .arrow-icon {
+    img {
+      width: 12.5rem;
+    }
+  }
+}
+.map {
+  min-height: 400px;
+}
