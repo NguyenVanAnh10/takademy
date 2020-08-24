@@ -6,10 +6,6 @@
     position: relative;
   }
 
-  .content {
-    padding: 11rem 0;
-  }
-
   .bg-dark-image {
     background-color: $coverBackgroundBlack;
   }
@@ -145,7 +141,7 @@
       .slider {
         padding: 0 50px;
         .card-creator {
-          height: 25vw;
+          height: 30rem;
           overflow: hidden;
           max-width: 400px;
           max-height: 500px;
@@ -177,33 +173,47 @@
     }
   }
   .news {
+    .slide-creator {
+      position: relative;
+    }
+    .bg-slide-creator-news {
+      height: 35rem;
+      position: relative;
+    }
     .content {
-      padding: 100px 0;
-      .slide {
-        .slide-content {
-          .bg-piece-left-red {
-            background-color: #ae252c;
-            position: relative;
-            .desc {
-              position: absolute;
-              z-index: 1;
-              left: 100px;
-              width: 450px;
-              .card-body {
-                border-radius: 8px;
-              }
-            }
-            .slide-image {
-              padding: 5rem 0 5rem 10vw;
-              img {
-                border: 7px solid $mainBackground;
-                height: 30vw;
-                width: 54vw;
-              }
-            }
-          }
-        }
+      position: absolute;
+      top: 0;
+    }
+    .owl-nav {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      width: 104%;
+    }
+    .owl-prev,
+    .owl-next {
+      background-color: #dc3545 !important;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 100%;
+      span {
+        font-size: 2rem;
+        position: relative;
+        bottom: 3px;
       }
+    }
+    .slide-image {
+      img {
+        border: 7px solid $mainBackground;
+        width: 56vw !important;
+        height: 31vw;
+      }
+    }
+    .owl-dots {
+      display: none;
     }
   }
 
@@ -224,8 +234,8 @@
   .carousel {
     .carousel-control-prev {
       background: $freshRed;
-      height: 6rem;
-      width: 6rem;
+      height: 3rem;
+      width: 3rem;
       border-radius: 100%;
       top: 50%;
       transform: translateY(-50%);
@@ -233,8 +243,8 @@
     }
     .carousel-control-next {
       background: $freshRed;
-      height: 6rem;
-      width: 6rem;
+      height: 3rem;
+      width: 3rem;
       border-radius: 100%;
       top: 50%;
       transform: translateY(-50%);
@@ -272,4 +282,26 @@
 }
 
 @include media-breakpoint-up(lg) {
+  .carousel {
+    .carousel-control-prev {
+      height: 6rem !important;
+      width: 6rem !important;
+    }
+    .carousel-control-next {
+      height: 6rem !important;
+      width: 6rem !important;
+    }
+  }
+  .news {
+    .owl-next,
+    .owl-prev {
+      height: 6rem !important;
+      width: 6rem !important;
+      span {
+        font-size: 3rem !important;
+        position: relative;
+        bottom: 7px;
+      }
+    }
+  }
 }

@@ -59,6 +59,8 @@
           items: 3,
         },
       },
+      // autoplay: true,
+      // autoplayTimeout: 3000,
     });
     $(".owl-carousel-creators").owlCarousel({
       loop: true,
@@ -70,8 +72,8 @@
         },
       },
       animateOut: "fadeOut",
-      autoplay: true,
-      autoplayTimeout: 4000,
+      // autoplay: true,
+      // autoplayTimeout: 4000,
     });
     const creators = [
       { id: 1, creator: "creator-1" },
@@ -94,8 +96,16 @@
         }
       });
     });
-    $(".carousel").carousel({
-      interval: 2000,
+    $(".carousel").carousel();
+    $(".owl-carousel-news").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      responsive: {
+        0: {
+          items: 1,
+        },
+      },
     });
   </script>
 </footer>

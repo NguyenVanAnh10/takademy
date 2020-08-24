@@ -34,6 +34,7 @@ news:
   items:
     - image: /images/home-slide-1.png
     - image: /images/home-slide-2.png
+    - image: /images/Gamehubvn-tonight-or-never-1.jpg
 partners:
   heading: Đối tác
   subHeading: của chúng tôi
